@@ -36,42 +36,40 @@ nav {
   align-items: center;
   padding: 30px;
 }
-nav .desktop-nav {
+.main-nav {
   list-style: none;
   display: none;
 }
-nav .desktop-nav li {
-  display: inline-block;
-  padding: 0 20px;
+.main-nav__item {
+  display: block;
+  padding: 20px 0;
 }
-nav .desktop-nav li a {
+.main-nav__item a {
   text-decoration: none;
-  color: var(--header-color);
   transition: color 0.3s;
+  color: var(--very-dark-desaturated-blue);
 }
-nav .desktop-nav li a:hover,
-nav .desktop-nav li a:active {
-  color: #000;
+.main-nav__item a:hover,
+.main-nav__item a:active {
+  color: hsl(194, 100%, 78%);
 }
-nav .desktop-nav li:last-child a {
-  background-color: var(--header-color);
-  color: #000;
+.main-nav__item:last-child a {
+  background-color: var(--yellow);
+  color: var(--very-dark-desaturated-blue);
   border-radius: 20px;
   font-family: "Fraunces", serif;
   font-weight: 700;
+  text-transform: uppercase;
   padding: 10px 20px;
   transition: all 0.3s;
 }
-nav .desktop-nav li:last-child a:hover,
-nav .desktop-nav li:last-child a:active {
+.main-nav__item:last-child a:hover,
+.main-nav__item:last-child a:active {
   color: var(--header-color);
-  background-color: #8ee5ff;
+  background-color: hsl(194, 100%, 78%);
 }
 .hero-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 5em;
   text-align: center;
 }
 .hero-box__heading {
@@ -81,6 +79,7 @@ nav .desktop-nav li:last-child a:active {
   letter-spacing: 5px;
   font-size: clamp(1.3em, 10vw, 3em);
 }
+
 /* service-section */
 .service-section {
   display: flex;
@@ -283,50 +282,4 @@ footer .footer-contact ul li {
 }
 .attribution a:hover {
   color: var(--header-color);
-}
-
-@media screen and (min-width: 767px) {
-  main {
-    background-image: url(../images/desktop/image-header.jpg);
-  }
-  .mobile-nav {
-    display: none;
-  }
-  nav .desktop-nav {
-    display: block;
-  }
-  .services {
-    flex-direction: row;
-    align-items: center;
-  }
-  .service-item {
-    flex: 1 0 50%;
-  }
-  .service-item#transform-para {
-    order: -1;
-  }
-  .service-para#transform-para,
-  .service-para#stand-out-para {
-    font-size: 0.8em;
-    text-align: left;
-    padding: 0px 25px;
-  }
-  .service-para#graphic-para,
-  .service-para#photography-para {
-    bottom: 10px;
-    font-size: 0.8em;
-    width: 300px;
-    padding: 0;
-  }
-
-  .testimonial-box {
-    flex-flow: row nowrap;
-    gap: 30px;
-  }
-  .testimonial-item p {
-    font-size: 0.8em;
-  }
-  section.photo-section picture {
-    flex: 1 0 25%;
-  }
 }

@@ -1,0 +1,86 @@
+/* ........For mobile menu show......... */
+@media screen and (max-width: 766px) {
+  .main-nav.show-nav {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    background-color: var(--header-color);
+    width: calc(100% - 60px);
+    text-align: center;
+    padding: 20px 0;
+    z-index: 6;
+  }
+  .main-nav.show-nav::before {
+    position: absolute;
+    right: 0;
+    top: -30px;
+    content: "";
+    display: block;
+    border: 15px solid transparent;
+    border-right: 15px solid var(--header-color);
+    border-bottom: 15px solid var(--header-color);
+  }
+}
+/* ..................................................... */
+@media screen and (min-width: 767px) {
+  main {
+    background-image: url(../images/desktop/image-header.jpg);
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .main-nav {
+    display: block;
+  }
+  .main-nav__item {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  .main-nav__item a {
+    color: var(--header-color);
+  }
+  .main-nav__item a:hover,
+  .main-nav__item a:active {
+    color: var(--very-dark-desaturated-blue);
+  }
+  .main-nav__item:last-child a {
+    background-color: var(--header-color);
+    color: var(--very-dark-desaturated-blue);
+  }
+  .services {
+    flex-direction: row;
+    align-items: center;
+  }
+  .service-item {
+    flex: 1 0 50%;
+  }
+  .service-item#transform-para {
+    order: -1;
+  }
+  .service-para#transform-para,
+  .service-para#stand-out-para {
+    font-size: 0.8em;
+    text-align: left;
+    padding: 0px 25px;
+  }
+  .service-para#graphic-para,
+  .service-para#photography-para {
+    bottom: 10px;
+    font-size: 0.8em;
+    width: 300px;
+    padding: 0;
+  }
+
+  .testimonial-box {
+    flex-flow: row nowrap;
+    gap: 30px;
+  }
+  .testimonial-item p {
+    font-size: 0.8em;
+  }
+  section.photo-section picture {
+    flex: 1 0 25%;
+  }
+}
