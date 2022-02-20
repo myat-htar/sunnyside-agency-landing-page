@@ -8,4 +8,12 @@ mobileNavIcon.addEventListener("click", function () {
       navs.classList.remove("show-nav");
     });
   }
+
+  //changing menu design when the size of window changing
+  window.onresize = sizeFunction;
+  function sizeFunction() {
+    if (document.documentElement.clientWidth >= 767) {
+      navs.classList.remove("show-nav");
+    }
+  }
 });
